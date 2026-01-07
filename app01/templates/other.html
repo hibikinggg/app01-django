@@ -1,0 +1,49 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="other">
+
+    <!-- 上：お問い合わせ -->
+    <div class="contact-card">
+        <h2>お問い合わせ</h2>
+
+        <label>お名前</label>
+        <input type="text">
+
+        <label>メールアドレス</label>
+        <input type="email">
+
+        <label>ご質問</label>
+        <textarea></textarea>
+
+        <button id ="click">送信</button>
+        <div id="bg">
+            <div id="alertbox">
+                <p>OK?</p>
+                <button id="OKOK">OK</button>
+            </div>
+        </div>
+    </div>
+
+       <!-- 下：SNS -->
+    <div class="sns-section">
+
+        <div class="sns-item">
+            <img src="{% static 'app01/Instagram.png' %}" class="sns-icon">
+            <div class="sns-line">
+                <span class="value">hibinoon</span>
+            </div>
+        </div>
+
+        <div class="sns-item">
+            <img src="{% static 'app01/x.jpg' %}" class="sns-icon">
+            <div class="sns-line">
+               <span class="value">habaner</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,531 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffde31;
+}
+
+h1{
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+
+.line {
+    position: relative;
+    width: 300px;
+    height: 10px;
+    background: #ffffff;
+    margin: 0px 0 10px 140px; 
+
+}
+.line::before,
+.line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 17px;
+    height: 17px;
+    background: #ffffff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.line::before {
+    left: -8px;
+}
+.line::after {
+    right: -8px;
+}
+
+
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.left{
+    flex-shrink: 0;
+}
+
+/* 写真＋装飾 */
+.photo-frame {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 8 20px rgba(0,0,0,0.15);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+.img-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* 拡大画像 */
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 5%;
+    border-radius: 12px;
+}
+
+/* 閉じるボタン */
+.img-modal .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 35px;
+}
+
+
+.label {
+    width: 140px;
+    font-weight: bold;
+    font-weight: 1000;
+    margin-left: 140px;
+}
+
+.value {
+    font-weight: bold;
+    font-weight: 700;   
+    font-size: 35px; 
+}
+
+
+/**/
+.other {
+    background: #ffe14d;
+    padding: 60px;
+}
+
+/* お問い合わせカード */
+.contact-card {
+    background: #fff6c7;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 500px;
+    margin: 0 auto 80px;
+}
+
+.contact-card h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.contact-card label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 5px;
+}
+
+.contact-card input,
+.contact-card textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    font-size: 16px;
+}
+
+#bg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.4);
+    z-index: 1000;
+    display: none;
+}
+
+#click{
+    border-radius : 5%;          
+    font-size     : 15pt;        
+    text-align    : center;     
+    padding       : 5px 5px;      
+    color         : black;     
+}
+#alertbox{
+    margin: 200px auto 0;
+    text-align: center;
+    padding-top: 25px;
+    width: 300px;
+    height: 85%;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,.3);
+    z-index: 1100;
+    position: relative;
+    height: auto;
+}
+
+/* SNSセクション */
+.sns-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* 各SNS */
+.sns-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.sns-icon {
+    width: 80px;
+}
+
+.sns-line {
+    position: relative;
+    width: 300px;
+    height: 10px;
+    background: #ffffff;
+    margin: 0px 0 10px 140px
+}
+
+.sns-line::before,
+.sns-line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.sns-line::before {
+    left: -8px;
+}
+
+.sns-line::after {
+    right: -8px;
+}
+
+.sns-line span {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/**profile**/
+.profile-experience-section {
+  max-width: 900px;
+  margin: 40px auto;
+  font-family: 'Fredoka One', 'Arial Black', Arial, sans-serif;
+  padding: 16px;
+}
+.profile-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  padding: 30px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.profile-box .profile-exp-left,
+.profile-box .profile-ana-left {
+  flex: 1.3;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.profile-box h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+  
+  font-family: inherit;
+}
+.profile-exp-left ul,
+.profile-ana-left ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 8px;
+}
+.profile-exp-left li,
+.profile-ana-left li {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.profile-box .profile-exp-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.exp-subimg-row {
+  display: flex;
+  gap: 8px;
+}
+.exp-subimg {
+  position: absolute;
+  left: 100;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid #222;
+  background: #fff;
+}
+.img-modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  overflow: auto;
+  background: rgba(0,0,0,0.7);
+  align-items: center;
+  justify-content: center;
+}
+.img-modal-content-img {
+  margin: auto;
+  display: block;
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 16px;
+  box-shadow: 0 0 60px #222;
+  background: #fff;
+}
+.img-modal-close {
+  position: absolute;
+  top: 6vh;
+  right: 8vw;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.exp-title.highlight {
+  border-bottom: 3px solid #222;
+  padding-bottom: 2px;
+}
+
+/* ANARYSISエリア */
+.profile-box .profile-ana-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 250px;
+}
+.ana-mainimg {
+    margin-top: 0;
+}
+
+.my-divider {
+  border: none;
+  border-top: 5px solid #ffde;
+  margin: 35px 0 25px 0;
+  width: 95%;
+  border-radius: 3px;
+}
+
+
+.analysis-list {
+  list-style: none;
+  padding: 0;
+}
+
+.analysis-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 12px 20px;
+  margin-bottom: 12px;
+
+  border: 2px solid rgba(20, 20, 16, 0.877);
+  border-radius: 14px;   /* ← 全体の角丸 */
+
+  font-weight: bold;
+}
+
+
+/**contents***/
+
+
+.works-title {
+    text-align: center;
+    margin-bottom: 36px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.works-area {
+  display: flex;
+  flex-direction: column;   /* ★これで縦並び！ */
+  align-items: center;      /* 子要素を中央寄せ */
+  gap: 40px;                /* 円同士の間隔 */
+}
+.work-item {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+  margin-bottom: 32px;
+  background: transparent;  /* 必要に応じて調整 */
+  border-radius: 18px;
+  box-shadow: none;         /* 必要に応じて調整 */
+  padding: 18px 8px 0 8px;
+}
+.work-circle {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-dot {
+  position: absolute;
+  left: 0; top: 0;
+  z-index: 1;
+}
+
+/* 画像サイズ・位置を調整（少し小さめ） */
+.circle-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.work-label-area {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.work-bar {
+  width: 30px;
+  height: 3px;
+  background: #888;
+  border-radius: 3px;
+  margin: 0 10px;
+}
+.work-label {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #444;
+}
+.work-description {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  /* 必要なら行間等も調整 */
+}
+
+
+/* ヘッダー */
+.nav-header {
+    width: 100%;
+    background: linear-gradient(180deg, #f7f8fb 70%, rgba(255,255,255,0.7) 100%);
+    box-shadow: 0 12px 24px 0 rgba(107, 114, 142, 0.14);
+    padding: 0 0 10px 0;
+    position: relative;
+}
+
+/* ナビ */
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    margin: 0 auto;
+    padding: 24px 48px 0 48px;
+    max-width: 1024px;
+}
+
+.nav-list a {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s;
+    letter-spacing: 1px;
+}
+
+.nav-list a:hover {
+    color: #304073;
+    text-decoration: underline;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.14);
+}
+
+/* メイン */
+main {
+    background: #ffde31;
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 900px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #666;
+}

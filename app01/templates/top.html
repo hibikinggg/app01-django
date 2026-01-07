@@ -1,0 +1,66 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>INTRODUCE</h1>
+
+<div class="top">
+
+    <div class="left">
+        <div class="photo-frame">
+            <img id="profileImg" src="{% static 'app01/profile.png' %}" alt="profile"width="120"height="120"style="border-radius:50%; object-fit:cover;" >
+        </div>
+        <div id="imgModal" class="img-modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+    </div>
+    <!-- 右側 -->
+    <div class="right">
+        <div class="info">
+            <span class="label">名前</span>
+            <span class="value">笹野 響輝</span>
+        </div>
+        <div class="line"></div>
+
+        <div class="info">
+            <span class="label">生年月日</span>
+            <span class="value">2005 / 06 / 21</span>
+        </div>
+        <div class="line"></div>
+
+        <div class="info">
+            <span class="label">年齢</span>
+            <span class="value">20 歳</span>
+        </div>
+        <div class="line"></div>
+
+        <div class="info">
+            <span class="value">
+                東洋大学 情報連携学部 情報連携学科<br>
+                専攻：ビジネスとソフトウェア
+            </span>
+        </div>
+    </div>
+</div>
+<script>
+    const profileImg = document.getElementById("profileImg");
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.querySelector(".img-modal .close");
+
+    profileImg.onclick = () => {
+        modal.style.display = "block";
+        modalImg.src = profileImg.src;
+    };
+
+    closeBtn.onclick = () => {
+        modal.style.display = "none";
+    };
+
+    modal.onclick = () => {
+        modal.style.display = "none";
+    };
+</script>
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'app01/style.css' %}?v=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{% static 'app01/main.js' %}"></script>
+</head>
+<body>
+
+<header class="nav-header">
+    <nav class="nav-list">
+        <a href="/top/">Home</a>
+        <a href="/contents/">contents</a>
+        <a href="/profile/">profile</a>
+        <a href="/other/">contact</a>
+    </nav>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+
+
+</body>
+</html>

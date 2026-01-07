@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="works-section">
+  <h1>WORKS</h1>
+  <div class="works-area">
+    <div class="work-item">
+      <div class="work-circle">
+        <svg width="230" height="230" class="circle-dot">
+            <!-- 円本体 -->
+            <circle cx="115" cy="115" r="100" fill="#fff" stroke="#444" stroke-width="2"/>
+        </svg>
+        <img src="{% static 'app01/invest.png' %}" alt="" class="circle-img">
+      </div>
+      <div class="work-label-area">
+        <div class="work-bar"></div>
+        <span class="work-label">私の分析1</span>
+        <div class="work-bar"></div>
+      </div>
+      <p class="work-description">説明</p>
+    </div>
+    <div class="work-item">
+      <div class="work-circle">
+        <svg width="230" height="230" class="circle-dot">
+            <circle cx="115" cy="115" r="100" fill="#fff" stroke="#444" stroke-width="2"/>
+        </svg>
+        <img src="{% static 'app01/invest.png' %}" alt="" class="circle-img">
+      </div>
+      <div class="work-label-area">
+        <div class="work-bar"></div>
+        <span class="work-label">自分の分析2</span>
+        <div class="work-bar"></div>
+      </div>
+      <p class="work-description">説明</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

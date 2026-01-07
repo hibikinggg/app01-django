@@ -1,0 +1,71 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="profile-experience-section">
+  <!-- 1段目 EXPERIENCE -->
+  <div class="profile-box exp">
+    <div class="profile-exp-left">
+      <h1>EXPERIENCE</h1>
+      <ul>
+        <li>
+            <span class="exp-title highlight">$INVEST</span>
+            <p>現在投資を勉強しており、投資運用の経験あり</p>
+        </li>
+        <li>
+            <span class="exp-title highlight">$AUDIT (JCAATS)</span>
+        
+            <p>監査サービスJCAATSを経験済み</p>
+        </li>
+        <li>
+            <span class="exp-title highlight">$DATA ANALYSIS</span>
+            <p>多くの企業さんのデータ分析、今後の市場の動向をデータで分析</p>
+        </li>
+        <li>
+            <span class="exp-title highlight">$ACCOUNT</span>
+            <p>会計論についての知識あり</p>
+        </li>
+        <li>
+            <span class="exp-title highlight">$SOFTWEA</span>
+            <p>LinuxおよびUbuntuの操作や、Gitを用いたグループワークを経験。SQLでのデータ分析がとても得意</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="profile-exp-right">
+      <div class="exp-subimg-row">
+        <img src="{% static 'app01/invest.png' %}" alt="" >
+      </div>
+      <div class="profile-ana-right">
+            <img src="{% static 'app01/analysis.png' %}" alt="" class="ana-mainimg">
+      </div>
+    </div>
+  </div>
+  <!-- 2段目 ANARYSIS --><hr class="my-divider">
+  <div class="profile-box ana">
+    <div class="profile-ana-left">
+        <div class="analysis-title-wrap">
+            <span class="analysis-title-bg"></span>
+            <h1 class="analysis-title">ANALYSIS</h1>
+        </div>
+        <ul class="analysis-list">
+            <li class="analysis-item">
+                <span class="num">1</span>
+                <span class="text">SWOT ANALYSIS</span>
+            </li>
+            <li class="analysis-item">
+                <span class="num">2</span>
+                <span class="text">3C ANALYSIS</span>
+            </li>
+            <li class="analysis-item">
+                <span class="num">3</span>
+                <span class="text">STP ANALYSIS</span>
+            </li>
+        </ul>
+    </div>
+    
+  </div>
+</div>
+
+
+{% endblock %}
